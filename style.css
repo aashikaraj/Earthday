@@ -1,0 +1,240 @@
+body {
+    /*background:url('https://png.pngtree.com/background/20230403/original/pngtree-forest-woods-plants-realistic-picture-image_2266417.jpg');*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #37adbd;
+    font-family: 'Kaushan Script', cursive;
+    background-size: cover;
+  }
+  html {
+    font-size: 10px;
+  }
+
+
+  .menu-bar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #16517e;
+    padding: 13px 0;
+    z-index: 1000; 
+    display: flex; 
+    /*justify-content: space-between; /* Space out the items evenly */
+    align-items: center; 
+}
+
+.wrapper {
+  margin-top: 150px; 
+}
+
+.menu-item {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px; 
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+.logo {
+  margin-left: 11px; 
+}
+
+.logo img {
+  height: 30px; 
+  width: auto; /* Allow the width to adjust automatically */
+}
+
+
+.content {
+    margin-top: 50px; 
+    padding: 10px;
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    position: relative;
+  }
+  
+  .earth {
+    height: 30rem;
+    width: 30rem;
+    border: 2px solid #94D6F0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(https://e0.pxfuel.com/wallpapers/311/868/desktop-wallpaper-planet-earth-map-earth-texture-planet-earth-2.jpg);
+    background-size: cover;
+    background-color: #94D6F0;
+    background-blend-mode: multiply;
+    animation: revolution 4s linear infinite;
+    background-position: 0px 0px;
+    animation-fill-mode: forwards
+  }
+  
+  .eyes {
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  
+  .eye {
+    width: 4rem;
+    height: 2rem;
+    border: 5px solid #94D6F0;
+    border-top-color: transparent;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+  }
+  
+  .clouds {
+    margin-bottom: 10px; 
+    z-index: -1;
+    
+}
+  .mouth {
+    width: 8rem;
+    height: 4rem;
+    border: 5px solid #94D6F0;
+    border-top-color: transparent;
+    border-bottom-left-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+  }
+  .clouds img {
+    width: 15rem;
+    height: 10rem;
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    filter: brightness(0.9);
+    animation: cloudy 4s linear infinite;
+  }
+  img.third {
+     top: 20rem;
+    left: 20rem;
+  }
+  
+  .text {
+    margin-top: 6rem;
+    font-size: 4rem;
+    text-shadow: 5px 3px #1c689f;
+  }
+
+  .p {
+    line-height: 1.7em;
+    max-width: 20%;
+    display:  inline-block;
+  }
+  
+  .texts{
+    margin-top: 6rem;
+    font-size: 4rem;
+    /*text-shadow: 5px 3px #802acc;*/
+    font-size: 24px;
+    z-index: 4;
+  }
+
+  .strong-lines {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #133b12;
+    
+  }
+
+  @keyframes revolution {
+    from { background-position: 0 0; }
+      to { background-position: 200% 0; }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 8px;
+    }
+  }
+  
+  
+  @keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-text {
+    animation: fade-in 0.5s ease forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.earth:hover {
+  animation: scale 1s ease-in-out infinite, rotate 2s linear infinite;
+}
+
+
+.strong-lines:hover{
+  animation: scale 2s;
+}
+.text:hover,.texts:hover{
+  animation: shake 2s;
+}
+

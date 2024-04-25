@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Earth Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <div class="menu-bar">
+            <div class="logo">
+                <img src="images.jpeg" alt="Logo">
+            </div>
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">About</a>
+            <a href="#" class="menu-item">Services</a>
+            <a href="#" class="menu-item">Contact</a>
+        </div> 
+
+     <div class="wrapper">
+        <div class="earth">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="clouds">
+            <img src="https://i.ibb.co/2WsrMnT/Daco-656842.png" alt="">
+            <img class="third" src="https://i.ibb.co/2WsrMnT/Daco-656842.png" alt="">
+        </div>
+    </div> <br>
+
+    <div class="strong-lines">
+        <p>Earth Day is a reminder of our responsibility to protect and preserve our planet.</p>
+        <p>Let's join hands to combat climate change and promote sustainable living.</p>
+        <p>Every action counts - together, we can make a difference for future generations.</p>
+    </div>
+
+    <p class="texts">To Celebrate🎉<a href="#" id="celebrateLink"> click here</a></p>
+    <h1 class="text">  <span id="element"> </span></h1>
+ 
+    <script>
+        document.getElementById("celebrateLink").addEventListener("click", function(event) {
+            event.preventDefault(); 
+            document.getElementById("element").innerHTML ='<img src="eyJid.png" alt="Earth Day Logo">'; 
+            document.getElementById("element").classList.add("animate-text");
+        });
+    </script>
+</body>
+</html>
